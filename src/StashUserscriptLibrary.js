@@ -503,21 +503,21 @@
                     this.dispatchEvent(new Event('page:image'));
                 }
 
-                // movie scenes page
-                else if (this.matchUrl(location, /\/movies\/\d+\?/)) {
-                    this.log.debug('[Navigation] Movie Page - Scenes');
+                // movie scenes page (Renamed to Groups in Stash v0.27)
+                else if (this.matchUrl(location, /\/groups\/\d+\?/)) {
+                    this.log.debug('[Navigation] Groups Page - Scenes');
                     this.processTagger();
-                    this.dispatchEvent(new Event('page:movie:scenes'));
+                    this.dispatchEvent(new Event('page:group:scenes'));
                 }
-                // movie page
-                else if (this.matchUrl(location, /\/movies\/\d+/)) {
-                    this.log.debug('[Navigation] Movie Page');
-                    this.dispatchEvent(new Event('page:movie'));
+                // movie page (Renamed to Groups in Stash v0.27)
+                else if (this.matchUrl(location, /\/groups\/\d+/)) {
+                    this.log.debug('[Navigation] Group Page');
+                    this.dispatchEvent(new Event('page:group'));
                 }
-                // movies wall
-                else if (this.matchUrl(location, /\/movies\?/)) {
-                    this.log.debug('[Navigation] Wall-Movies Page');
-                    this.dispatchEvent(new Event('page:movies'));
+                // movies wall (Renamed to Groups in Stash v0.27)
+                else if (this.matchUrl(location, /\/groups\?/)) {
+                    this.log.debug('[Navigation] Wall-Groups Page');
+                    this.dispatchEvent(new Event('page:groups'));
                 }
 
                 // galleries wall
@@ -542,10 +542,10 @@
                     this.log.debug('[Navigation] Performer Page - Galleries');
                     this.dispatchEvent(new Event('page:performer:galleries'));
                 }
-                // performer movies page
-                else if (this.matchUrl(location, /\/performers\/\d+\/movies/)) {
-                    this.log.debug('[Navigation] Performer Page - Movies');
-                    this.dispatchEvent(new Event('page:performer:movies'));
+                // performer movies page (Renamed to Groups in Stash v0.27)
+                else if (this.matchUrl(location, /\/performers\/\d+\/groups/)) {
+                    this.log.debug('[Navigation] Performer Page - Groups');
+                    this.dispatchEvent(new Event('page:performer:groups'));
                 }
                 // performer page
                 else if (this.matchUrl(location, /\/performers\/\d+/)) {
@@ -597,10 +597,10 @@
                     this.log.debug('[Navigation] Studio Page - Performers');
                     this.dispatchEvent(new Event('page:studio:performers'));
                 }
-                // studio movies page
-                else if (this.matchUrl(location, /\/studios\/\d+\/movies/)) {
-                    this.log.debug('[Navigation] Studio Page - Movies');
-                    this.dispatchEvent(new Event('page:studio:movies'));
+                // studio movies page (Renamed to Groups in Stash v0.27)
+                else if (this.matchUrl(location, /\/studios\/\d+\/groups/)) {
+                    this.log.debug('[Navigation] Studio Page - Groups');
+                    this.dispatchEvent(new Event('page:studio:groups'));
                 }
                 // studio childstudios page
                 else if (this.matchUrl(location, /\/studios\/\d+\/childstudios/)) {
